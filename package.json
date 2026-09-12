@@ -4,9 +4,8 @@
   "description": "India Carbon Intelligence Dashboard — structured around CCTS, PAT, CEA, CPCB frameworks",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  "dev": "vite",
+  "build": "node ./node_modules/vite/bin/vite.js build"
   },
   "devDependencies": {
     "vite": "^6.0.0"
