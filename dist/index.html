@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarbonIntel — India Carbon Intelligence Dashboard</title>
+  <meta name="description" content="Real-time carbon accounting and emissions intelligence for Indian facilities. Structured around CCTS, PAT, CEA, and CPCB regulatory frameworks." />
+  <meta name="keywords" content="carbon accounting, India, CCTS, PAT, CEA, emissions, GHG, Scope 1, Scope 2, compliance" />
+  <meta name="author" content="CarbonIntel" />
+  <meta name="theme-color" content="#0a0f1e" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script type="module" crossorigin src="/assets/index-sd4j-xlC.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Ba0isMuK.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Loading state -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <span class="logo-carbon">Carbon</span><span class="logo-intel">Intel</span>
+        </div>
+        <div class="loading-bar">
+          <div class="loading-bar-fill"></div>
+        </div>
+        <p class="loading-text">Initializing emission analysis pipeline…</p>
+      </div>
+    </div>
+
+    <!-- Manual data-entry screen (shown first; dashboard only runs after submission) -->
+    <div id="data-entry-screen" class="data-entry-screen hidden"></div>
+
+    <!-- Dashboard container (hidden until loaded) -->
+    <div id="dashboard" class="dashboard hidden">
+      <!-- Header -->
+      <header id="dashboard-header" class="dashboard-header">
+        <div class="header-left">
+          <h1 class="brand"><span class="logo-carbon">Carbon</span><span class="logo-intel">Intel</span></h1>
+          <span class="header-subtitle">India Carbon Intelligence</span>
+        </div>
+        <div class="header-right">
+          <div id="header-intensity-badge" class="intensity-badge"></div>
+          <div id="header-framework-tags" class="framework-tags"></div>
+        </div>
+      </header>
+
+      <!-- Main grid -->
+      <main id="dashboard-main" class="dashboard-main">
+        <!-- Row 1: Overview + Scope Donut -->
+        <section id="facility-overview" class="card card-overview"></section>
+        <section id="scope-donut" class="card card-donut"></section>
+
+        <!-- Row 2: Hotspot chart (full width) -->
+        <section id="hotspot-chart" class="card card-hotspot"></section>
+
+        <!-- Row 3: Recommendations + Impact -->
+        <section id="recommendations-panel" class="card card-recommendations"></section>
+        <section id="impact-projection" class="card card-impact"></section>
+
+        <!-- Row 4: Data Quality + Regulatory Context -->
+        <section id="data-quality" class="card card-data-quality"></section>
+        <section id="regulatory-context" class="card card-regulatory"></section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="dashboard-footer">
+        <p>CarbonIntel v1.0 — Data sources: CEA CO₂ Baseline Database v21.0, IPCC 2006 Guidelines, India GHG Program</p>
+        <p class="footer-disclaimer">Recommendation scoring uses internal MVP heuristic weights (0.5/0.3/0.2) — not from any regulation.</p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
